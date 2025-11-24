@@ -1,0 +1,18 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://www.saucedemo.com",
+      "localStorage": [
+        {
+          "name": "backtrace-guid",
+          "value": "af7ae905-e211-433b-9f83-3fe0f896314c"
+        },
+        {
+          "name": "backtrace-last-active",
+          "value": "1764004562122"
+        }
+      ]
+    }
+  ]
+}
