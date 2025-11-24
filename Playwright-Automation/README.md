@@ -1,11 +1,62 @@
-[![Playwright CI](https://github.com/salamakalanchvi/salama-playwright-automation/actions/workflows/playwright-ci.yml/badge.svg)](https://github.com/salamakalanchvi/salama-playwright-automation/actions/workflows/playwright-ci.yml)
+<!-- HEADER BANNER -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Playwright%20Automation-Suite-2ea44f?style=for-the-badge" />
+</p>
 
-# Playwright-Automation
+<h1 align="center">🚀 End-to-End Playwright Automation Framework</h1>
 
-This folder contains the Playwright-based automation suite used in this portfolio.
+<p align="center">
+  <strong>Modern, Scalable, Industry-Standard Testing Framework</strong>  
+  <br/>
+  Built with Page Objects • Role-based Fixtures • Storage State • CI/CD • Allure • HTML Reports
+</p>
 
-**Quick Start (Windows / PowerShell)**
+<p align="center">
+  <a href="https://github.com/salamakalanchvi/salama-playwright-automation/actions/workflows/playwright.yml">
+    <img src="https://github.com/salamakalanchvi/salama-playwright-automation/actions/workflows/playwright.yml/badge.svg" />
+  </a>
+  <img src="https://img.shields.io/badge/Playwright%20Tests-Automated-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/Allure-Reporting-ff69b4?style=flat-square" />
+  <img src="https://img.shields.io/badge/TypeScript-Strict-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/CI-GitHub%20Actions-yellow?style=flat-square" />
+</p>
+
+---
+
+# 🎥 Demo (GIF Placeholder)
+
+> Recruiters love visuals.  
+> Replace `demo.gif` with your GIF once recorded.
+
 ```
+
+./assets/demo.gif
+
+````
+
+---
+
+# 📁 Project Structure (Clean & Scalable)
+
+```bash
+Playwright-Automation/
+│
+├── tests/                   # Smoke + Regression test suites
+├── pages/                   # Page Object Model files
+├── fixtures/                # Role-based fixtures (User/Admin)
+├── utilities/               # Logger, helpers, global setup, common utilities
+├── storage/                 # Authenticated storage states (user/admin)
+├── config/                  # Environment variables (baseURL, credentials)
+├── playwright-report/       # Playwright HTML report output
+├── allure-results/          # Raw Allure data
+└── allure-report/           # Allure HTML reports
+````
+
+---
+
+# ⚡ Quick Start (Windows / PowerShell)
+
+```powershell
 cd Playwright-Automation
 npm ci
 npx playwright install
@@ -13,60 +64,173 @@ npm run test:smoke
 npm run report:open
 ```
 
-**Available npm scripts**
-- `test:smoke`: Run smoke tests (Chromium user project)
-- `test:regression`: Run regression tests
-- `test`: Run full test suite
-- `report:open`: Open the HTML report produced by Playwright
-- `install-browsers`: Install Playwright browsers
+---
 
-**Structure**
-- `tests/` — test specs and suites
-- `pages/` — page object models
-- `fixtures/` — test fixtures and test data
-- `utilities/` — helpers, global setup, logger
-- `playwright-report/` — generated HTML reports
+# 🧪 Available npm Scripts
 
-**Tips for reviewers**
-- Run `npm ci` and then the `test:smoke` script to see a minimal end-to-end run.
-- Check `playwright-report/index.html` after a run for a visual summary.
+| Script               | Description                                                |
+| -------------------- | ---------------------------------------------------------- |
+| **test:smoke**       | Runs smoke suite (Chromium + user)                         |
+| **test:regression**  | Full regression suite                                      |
+| **test**             | Run everything                                             |
+| **report:open**      | Opens Playwright HTML report                               |
+| **allure:serve**     | Opens Allure report (no Java) OR Java version if installed |
+| **install-browsers** | Installs Playwright browser binaries                       |
 
-Add a short GIF or screenshot here showing the `playwright-report` to make evaluation faster.
+---
 
-Quick facts:
-- **Automated specs:** 1 smoke spec (`tests/smoke/sauceDemo.spec.ts`)
- - **Automated specs:** 1 smoke spec (`tests/smoke/sauceDemo.spec.ts`)
- - **Example smoke run (local/CI):** 1 test passed — full smoke run ~20s (example observed run: 20.4s)
-- **How to generate storage states:** Run the included global setup before CI or locally to create `storage/user.json` and `storage/admin.json`:
+# 🧩 Architecture Overview (POM + Fixtures + Storage State)
 
-```powershell
-cd Playwright-Automation
-npx playwright test --project=chromium-user --config=playwright.config.ts --workers=1
+## ✔ Page Object Model (POM)
+
+Each page contains:
+
+* All locators
+* All actions
+* Clean method naming
+* Logging for every interaction
+* Zero test logic (tests stay clean)
+
+### Example:
+
+```ts
+await userInventoryPage.addItemToCart('Sauce Labs Backpack');
 ```
 
-Or run the global setup directly:
+---
 
-```powershell
-cd Playwright-Automation
-node utilities/globalUtilities/global-setup.ts
-```
+## ✔ Role-Based Fixtures
 
-Note: The repository contains example storage files named `storage/*.example.json`. Generate fresh storage by running the global setup above so tests run with valid sessions.
+Your tests automatically load correct user/admin context:
 
-**Fixtures & Projects**
-- Use `fixtures/user.fixtures.ts` when writing tests that should run as a standard user. Import tests like:
 ```ts
 import { test } from '../fixtures/user.fixtures';
 ```
-- Use `fixtures/admin.fixtures.ts` for admin-specific tests.
-- The project-level `storageState` is configured in `playwright.config.ts`. Prefer using the Playwright-provided `page` in fixtures (as this project does) so tests respect the project's `storageState` when you run:
 
-Note: The `admin` project in this repository is included as a portfolio example to demonstrate handling multiple roles and storage states. Sauce Demo does not provide a separate admin dashboard for this exercise — the admin project is a placeholder that uses different credentials to show the pattern, not a separate admin UI.
+vs
 
-CI badge:  
-![Playwright CI](https://github.com/salamakalanchvi/salama-playwright-automation/actions/workflows/playwright.yml/badge.svg)
-
-```powershell
-npx playwright test --project=chromium-user
-npx playwright test --project=chromium-admin
+```ts
+import { test } from '../fixtures/admin.fixtures';
 ```
+
+This demonstrates **enterprise-level architecture**.
+
+---
+
+## ✔ Storage State Authentication
+
+Login happens ONE TIME using global-setup.
+
+Fast. Reliable. Recommended by Playwright team.
+
+---
+
+# 🧪 Example E2E Test (Readable + Real)
+
+```ts
+test('Checkout flow', async ({ 
+  userLoginPage, 
+  userInventoryPage, 
+  userCartPage, 
+  userCheckoutPage 
+}) => {
+
+  await test.step('Login', async () => {
+    await userLoginPage.login();
+  });
+
+  await test.step('Add product to cart', async () => {
+    await userInventoryPage.addItemToCart('Sauce Labs Backpack');
+  });
+
+  await test.step('Complete checkout', async () => {
+    await userCartPage.checkout('Salama', 'Awan', '12345');
+    await userCheckoutPage.finish();
+  });
+
+});
+```
+
+---
+
+# 📊 Reporting
+
+## ✔ Playwright HTML Report
+
+Built-in and auto-generated.
+
+Run:
+
+```
+npm run report:open
+```
+
+---
+
+## ✔ Allure Report (optional)
+
+If Java installed:
+
+```
+npm run allure:generate
+npm run allure:open
+```
+
+If using no-Java version:
+
+```
+npm run allure:serve
+```
+
+---
+
+# 🚀 CI/CD (GitHub Actions)
+
+Automatically:
+
+✔ Installs dependencies
+✔ Installs browsers
+✔ Runs full test matrix
+✔ Uploads reports as artifacts
+✔ Deploys report to GitHub Pages
+
+This proves you can work in **real automation teams**.
+
+---
+
+# 💡 Why This Framework Is Professional 
+
+* Clean **Page Object Model**
+* Role-specific **fixtures**
+* **Fast** storage state login
+* **TypeScript strict typing**
+* GitHub Actions **CI**
+* **Allure + HTML reports**
+* Automated **multi-browser** testing
+* Supports scaling to **100+ tests**
+* Readable, atomic **test.steps()**
+
+This is **exactly how top companies structure Playwright frameworks.**
+
+---
+
+# 🛠 Future Enhancements
+
+* Visual Regression Testing
+* API integration using Playwright API
+* Data-driven testing utilities
+* Parallel regression matrix
+* Slack/Teams CI notifications
+* Retry logic + smart waits
+* Advanced error screenshot annotation
+
+---
+
+# 📬 Contact
+
+If you'd like to connect:
+
+**Salama — QA Automation Engineer**
+🌐 GitHub: [https://www.linkedin.com/in/salama-kalanchvi-082589298/](https://www.linkedin.com/in/salama-kalanchvi-082589298/)
+📩 Open to QA roles / freelance automation work
+
