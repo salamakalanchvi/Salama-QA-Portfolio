@@ -10,7 +10,6 @@
     "generate-storage": "npx playwright test --project=chromium-user --workers=1",
     "lint": "eslint './**/*.{ts,js}' --ext .ts,.js || true",
     "format": "prettier --write './**/*.{ts,js,json,md}'",
-
     "allure:generate": "allure generate allure-results --clean -o allure-report",
     "allure:open": "allure open allure-report"
   },
@@ -21,12 +20,15 @@
   "devDependencies": {
     "@playwright/test": "^1.56.1",
     "@types/node": "^24.10.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.4.2",
     "eslint": "^8.50.0",
-    "prettier": "^2.8.8",
     "eslint-config-prettier": "^9.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.0.0"
+    "prettier": "^2.8.8"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }
