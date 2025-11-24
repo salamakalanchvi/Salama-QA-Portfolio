@@ -1,0 +1,4 @@
+[INFO] Adding product: Sauce Labs Backpack
+[INFO] Open the cart for checkout
+[INFO] Filling checkout info: Salama Awan
+[INFO] Completing checkout

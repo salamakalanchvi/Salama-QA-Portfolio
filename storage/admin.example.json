@@ -1,0 +1,5 @@
+{
+  "_example": "Example admin storage state. Generate real storage by running the Playwright global setup.",
+  "cookies": [],
+  "origins": []
+}

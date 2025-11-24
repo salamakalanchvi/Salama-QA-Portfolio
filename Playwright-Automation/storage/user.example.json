@@ -1,0 +1,12 @@
+{
+  "_example": "This is an example storageState produced by the global setup. Do NOT commit real credentials here.",
+  "cookies": [
+    {
+      "name": "session-username",
+      "value": "standard_user",
+      "domain": "www.saucedemo.com",
+      "path": "/"
+    }
+  ],
+  "origins": []
+}
