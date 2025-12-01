@@ -15,6 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
 
+    # 🔐 Injecting Secrets for Playwright global-setup
+    env:
+      STANDARD_USERNAME: ${{ secrets.STANDARD_USERNAME }}
+      STANDARD_PASSWORD: ${{ secrets.STANDARD_PASSWORD }}
+      ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+      ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+      BASE_URL: ${{ secrets.BASE_URL }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -45,6 +53,11 @@ jobs:
         working-directory: Playwright-Automation
         env:
           CI: true
+          STANDARD_USERNAME: ${{ secrets.STANDARD_USERNAME }}
+          STANDARD_PASSWORD: ${{ secrets.STANDARD_PASSWORD }}
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          BASE_URL: ${{ secrets.BASE_URL }}
 
       - name: Generate Allure HTML report
         run: npm run allure:generate
