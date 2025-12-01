@@ -1,16 +1,11 @@
-name: Playwright Tests + Allure + GitHub Pages
+name: Playwright CI Pipeline
 
 # -------------------------------------------------------
-# 🔥 TRIGGERS
-# - Every push (any branch): Run tests
-# - Every pull request: Run tests
-# - Only push to main: Deploy reports
+# 🔥 Trigger: Run CI on ANY PUSH (all branches)
 # -------------------------------------------------------
 on:
   push:
-    branches: [ "**" ]         # Run tests on EVERY PUSH
-  pull_request:
-    branches: [ "**" ]         # Run tests on EVERY PR
+    branches: [ "**" ]
 
 concurrency:
   group: playwright-${{ github.ref }}
@@ -61,7 +56,7 @@ jobs:
         run: npx playwright test --reporter=github,html
         working-directory: Playwright-Automation
 
-      - name: Upload Playwright HTML Report
+      - name: Upload Playwright HTML report
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
@@ -84,22 +79,19 @@ jobs:
           path: Playwright-Automation/allure-report
 
 # -------------------------------------------------------
-# 🚀 JOB 2 — Deploy Playwright HTML Report to GitHub Pages
+# 🚀 JOB 2 — Deploy Playwright HTML report to GitHub Pages (ONLY on main)
 # -------------------------------------------------------
   deploy-pages:
     name: Upload report to GitHub Pages
     needs: test
-
-    # ❗ deploy ONLY when pushing to main
     if: github.ref == 'refs/heads/main'
-
     runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
 
     steps:
-      - name: Download Playwright HTML Report
+      - name: Download HTML Report
         uses: actions/download-artifact@v4
         with:
           name: playwright-report
@@ -114,16 +106,13 @@ jobs:
 # 🌐 JOB 3 — Publish GitHub Pages
 # -------------------------------------------------------
   deploy:
-    name: Deploy to GitHub Pages
+    name: Publish GitHub Pages
     needs: deploy-pages
-
-    # Only when pushing to main
     if: github.ref == 'refs/heads/main'
-
     runs-on: ubuntu-latest
     permissions:
       pages: write
 
     steps:
-      - name: Deploy GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
