@@ -143,3 +143,16 @@ dist
 # Vite log timestamp files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Ignore Playwright reports
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+*.webm
+*.png
+*.mp4
+*.zip
+
+# VSCode
+.vscode/

@@ -1,7 +1,0 @@
-{
-  "_example": "Example storage state. Generate real storage by running the Playwright global setup.",
-  "cookies": [
-    { "name": "session-username", "value": "standard_user", "domain": "www.saucedemo.com" }
-  ],
-  "origins": []
-}
