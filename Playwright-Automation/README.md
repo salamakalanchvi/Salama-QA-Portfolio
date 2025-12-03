@@ -21,22 +21,10 @@
   <img src="https://img.shields.io/badge/CI-GitHub%20Actions-yellow?style=flat-square" />
 </p>
 
----
-
-# 🎥 Demo (GIF Placeholder)
-
-> Recruiters love visuals.  
-> Replace `demo.gif` with your GIF once recorded.
-
-```
-
-./assets/demo.gif
-
-````
 
 ---
 
-# 📁 Project Structure (Clean & Scalable)
+# 📁 Project Structure 
 
 ```bash
 Playwright-Automation/
@@ -47,9 +35,6 @@ Playwright-Automation/
 ├── utilities/               # Logger, helpers, global setup, common utilities
 ├── storage/                 # Authenticated storage states (user/admin)
 ├── config/                  # Environment variables (baseURL, credentials)
-├── playwright-report/       # Playwright HTML report output
-├── allure-results/          # Raw Allure data
-└── allure-report/           # Allure HTML reports
 ````
 
 ---
