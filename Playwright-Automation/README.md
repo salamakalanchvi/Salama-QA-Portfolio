@@ -195,7 +195,7 @@ This proves you can work in **real automation teams**.
 * Supports scaling to **100+ tests**
 * Readable, atomic **test.steps()**
 
-This is **exactly how top companies structure Playwright frameworks.**
+This is the kind of automation framework I've built in production environments.
 
 ---
 
@@ -208,14 +208,4 @@ This is **exactly how top companies structure Playwright frameworks.**
 * Slack/Teams CI notifications
 * Retry logic + smart waits
 * Advanced error screenshot annotation
-
----
-
-# 📬 Contact
-
-If you'd like to connect:
-
-**Salama — QA Automation Engineer**
-🌐 GitHub: [https://www.linkedin.com/in/salama-kalanchvi-082589298/](https://www.linkedin.com/in/salama-kalanchvi-082589298/)
-📩 Open to QA roles / freelance automation work
 

@@ -2,7 +2,7 @@
 
 ## 🎯 1. Introduction & Purpose
 
-The purpose of this QA Strategy is to provide a structured, reliable, and scalable approach to software testing for the project. This document outlines the quality objectives, testing methodologies, tools, roles, and processes required to ensure that all releases are stable, user-friendly, and aligned with business expectations.
+This QA Strategy outlines how I approach testing: catching bugs early, automating repetitive work, and keeping the focus on what matters—user experience. I've seen projects fail because testing came too late in the cycle. This document covers the methodologies, tools, and processes I use to prevent that.
 
 ---
 
@@ -259,4 +259,4 @@ Daily discussion with QA, Dev, PM.
 
 ## 📌 16. Conclusion
 
-This QA Strategy establishes a structured, scalable, and high-quality approach for delivering stable software releases. It ensures that the QA process remains efficient, measurable, and aligned with business goals.
+Through my 4 years of QA experience, I've learned that the best testing strategies are simple: test what matters first, automate what's repetitive, and catch issues before they reach production. That's what this framework does.

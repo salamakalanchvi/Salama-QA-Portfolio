@@ -26,16 +26,16 @@ Recruiters and hiring managers want to see:
 
 - How you **think as a tester**  
 - How you **structure your testing work**  
-- How clearly you **communicate defects and test flows**  
-- How well you **follow real-world QA documentation standards**  
+- Whether you can clearly explain what broke and why  
+- If your documentation is actually useful (not just pretty)  
 
 This folder demonstrates:
 
-- Strong understanding of **SDLC & STLC**  
-- Clear and traceable **test coverage**  
-- Ability to design **positive, negative, and edge case scenarios**  
-- Professional-level **defect reporting**  
-- Organized documentation aligned with QA team expectations  
+- My real-world testing process and how I think through problems  
+- How I trace requirements to test cases (traceability matters)  
+- Whether I test just the happy path or actually think about what could break  
+- How I report bugs in a way that developers actually understand  
+- Documentation that's useful, not just formatted nicely  
 
 ---
 
