@@ -14,7 +14,6 @@ This section includes all core manual testing artifacts expected from a strong Q
 - **Test Cases** — detailed, step-by-step validations  
 - **Bug Reports** — defect documentation using a standardized template  
 - **RTM (Requirement Traceability Matrix)** — requirement → scenario → test case → bug mapping  
-- **Execution Logs / Evidence** (optional)  
 - **Sample Project:** *Sauce Demo Web Application*
 
 Every document in this folder uses consistent formatting, clear structure, and VSCode/GitHub-friendly Markdown.
