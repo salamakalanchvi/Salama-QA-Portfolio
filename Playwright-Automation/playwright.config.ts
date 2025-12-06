@@ -38,44 +38,44 @@ export default defineConfig({
         storageState: 'storage/user.json',
       },
     },
-    {
-      name: 'chromium-admin',
-      use: {
-        ...devices['Desktop Chrome'],
-        storageState: 'storage/admin.json',
-      },
-    },
+    // {
+    //   name: 'chromium-admin',
+    //   use: {
+    //     ...devices['Desktop Chrome'],
+    //     storageState: 'storage/admin.json',
+    //   },
+    // },
 
     // ========== FIREFOX ==========
-    {
-      name: 'firefox-user',
-      use: {
-        ...devices['Desktop Firefox'],
-        storageState: 'storage/user.json',
-      },
-    },
-    {
-      name: 'firefox-admin',
-      use: {
-        ...devices['Desktop Firefox'],
-        storageState: 'storage/admin.json',
-      },
-    },
+    // {
+    //   name: 'firefox-user',
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //     storageState: 'storage/user.json',
+    //   },
+    // },
+    // {
+    //   name: 'firefox-admin',
+    //   use: {
+    //     ...devices['Desktop Firefox'],
+    //     storageState: 'storage/admin.json',
+    //   },
+    // },
 
     // ========== WEBKIT ==========
-    {
-      name: 'webkit-user',
-      use: {
-        ...devices['Desktop Safari'],
-        storageState: 'storage/user.json',
-      },
-    },
-    {
-      name: 'webkit-admin',
-      use: {
-        ...devices['Desktop Safari'],
-        storageState: 'storage/admin.json',
-      },
-    },
+    // {
+    //   name: 'webkit-user',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //     storageState: 'storage/user.json',
+    //   },
+    // },
+    // {
+    //   name: 'webkit-admin',
+    //   use: {
+    //     ...devices['Desktop Safari'],
+    //     storageState: 'storage/admin.json',
+    //   },
+    // },
   ],
 });
