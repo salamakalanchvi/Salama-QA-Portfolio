@@ -156,7 +156,10 @@ npm run report:open
 - **Smoke Suite:** 2 tests (login + E2E checkout)
 - **Regression Suite:** 24 tests (login, cart, checkout, inventory, session, edge cases)
 
-> **Note:** When reviewing this portfolio, run `npm run test:smoke` to see the framework in action. Test evidence (screenshots/videos) are generated automatically in the `test-results/` folder after each run.
+
+
+https://github.com/user-attachments/assets/89520873-4553-4cd7-b5fb-5a1df7cdb4f6
+
 
 
 ---
@@ -176,6 +179,10 @@ If using no-Java version:
 npm run allure:serve
 ```
 
+
+https://github.com/user-attachments/assets/a8c6fafb-a277-4662-b09b-2327613082aa
+
+
 ---
 
 # 🚀 CI/CD (GitHub Actions)
@@ -187,6 +194,11 @@ Automatically:
 ✔ Runs full test matrix
 ✔ Uploads reports as artifacts
 ✔ Deploys report to GitHub Pages
+
+
+https://github.com/user-attachments/assets/b0095c41-6053-4c97-ac23-4682f1394fd7
+
+
 
 ---
 
