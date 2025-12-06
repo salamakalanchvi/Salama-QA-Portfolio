@@ -5,6 +5,13 @@
 
 ---
 
+> **Personal Note:**  
+> I wrote these test cases during my first QA role when I was learning test case design. At the time, I was documenting everything manually because I didn't know automation yet. Looking back now, I'd automate TC-Login-001 and TC-Checkout-002 (the happy paths) and keep only edge cases and negative scenarios manual. But this process taught me how to think through preconditions, test data, and expected results—which made writing automation tests way easier later.
+>
+> **What I'd change today:** I'd add more security-focused test cases (SQL injection attempts, XSS in input fields, session timeout scenarios) and API-level validation instead of just UI checks.
+
+---
+
 ## Test Case Summary 📌
 | Field | Detail |
 |-------|--------|

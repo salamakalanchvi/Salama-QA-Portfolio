@@ -2,7 +2,7 @@
 
 Welcome! This is my professional QA portfolio showcasing **4+ years of hands-on quality engineering experience**—from discovering QA as a Virtual Assistant to building production-scale automation frameworks.
 
-**My story:** I didn't start with a CS degree. I started as a VA, noticed I cared obsessively about quality, and my manager suggested testing. That one conversation led to automation, scaling, mentoring, and becoming a mid-level QA engineer. After my second company was affected by layoffs, I took it as a chance to invest in myself and build this portfolio.
+**My story:** I didn't start with a CS degree. I started as a VA, noticed I cared obsessively about quality, and my manager suggested testing. That one conversation led to learning automation, building frameworks, and getting promoted to mid-level QA. After my second company was affected by layoffs, I took it as a chance to build this portfolio.
 
 **Start here:** [My Full Story →](./ABOUT_ME.md)
 
@@ -18,12 +18,16 @@ Welcome! This is my professional QA portfolio showcasing **4+ years of hands-on 
 ---
 
 ## 🎯 The Numbers That Matter
-
-- ✅ **45% reduction** in regression testing time through strategic automation
-- ✅ Built and scaled automation from 20 to **80+ test cases** across multiple projects
-- ✅ **96% test pass rate** maintained while growing framework
+- ✅ **45% reduction** in regression testing time through automation
+- ✅ Scaled automation frameworks from 20 to **150+ test cases** across multiple projects
+- ✅ **96% test pass rate** maintained in production
 - ✅ **Promoted** from Associate to Mid-Level QA
-- ✅ **0 critical production incidents** from untested code paths
+- ✅ **0 critical incidents** from my test coverage
+
+**In This Portfolio:**
+- ✅ **26 automated tests** (2 smoke, 24 regression) built from scratch
+- ✅ Production-ready Playwright framework with CI/CD
+- ✅ Page Object Model, fixtures, storage state authentication
 
 ---
 

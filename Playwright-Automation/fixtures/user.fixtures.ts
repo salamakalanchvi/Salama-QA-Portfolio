@@ -1,8 +1,10 @@
-import { test as base, Page } from '@playwright/test';
+import { test as base, Page, expect } from '@playwright/test';
 import { LoginPage } from '../pages/loginPage';
 import { InventoryPage } from '../pages/inventoryPage';
 import { CartPage } from '../pages/cartPage';
 import { CheckoutPage } from '../pages/checkoutPage';
+
+export { expect };
 
 type UserFixtures = {
   userPage: Page;

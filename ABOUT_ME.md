@@ -47,7 +47,7 @@ I believe good QA is about **thinking ahead**. It's not just running tests; it's
 - Learned CI/CD integration deeply from senior QA engineers (GitHub Actions, CircleCI, Jenkins, Harness)
 - Contributed to bug reporting workflows and severity classification initiatives
 - Participated in test planning and RTM (Requirement Traceability Matrix) creation
-- Scaled automation framework from 20 to 80+ test cases across multiple projects
+- Scaled automation framework from 20 to **150+ test cases** across multiple projects (web + mobile)
 - Worked closely with best senior QA engineers who shaped how I approach testing
 - Collaborated with cross-functional teams (Product, Engineering, DevOps)
 - **Key learnings:**

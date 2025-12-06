@@ -6,7 +6,7 @@
 <h1 align="center">🚀 End-to-End Playwright Automation Framework</h1>
 
 <p align="center">
-  <strong>Modern, Scalable, Industry-Standard Testing Framework</strong>  
+  <strong>Production-Ready E2E Testing Framework</strong>  
   <br/>
   Built with Page Objects • Role-based Fixtures • Storage State • CI/CD • Allure • HTML Reports
 </p>
@@ -98,7 +98,7 @@ vs
 import { test } from '../fixtures/admin.fixtures';
 ```
 
-This demonstrates **enterprise-level architecture**.
+This keeps tests clean and context-specific.
 
 ---
 
@@ -150,6 +150,15 @@ Run:
 npm run report:open
 ```
 
+### Test Results
+
+**Current Status:** 26/26 tests passing ✅
+- **Smoke Suite:** 2 tests (login + E2E checkout)
+- **Regression Suite:** 24 tests (login, cart, checkout, inventory, session, edge cases)
+
+> **Note:** When reviewing this portfolio, run `npm run test:smoke` to see the framework in action. Test evidence (screenshots/videos) are generated automatically in the `test-results/` folder after each run.
+
+
 ---
 
 ## ✔ Allure Report (optional)
@@ -179,23 +188,18 @@ Automatically:
 ✔ Uploads reports as artifacts
 ✔ Deploys report to GitHub Pages
 
-This proves you can work in **real automation teams**.
-
 ---
 
-# 💡 Why This Framework Is Professional 
+# 💡 What I Learned Building This
 
-* Clean **Page Object Model**
-* Role-specific **fixtures**
-* **Fast** storage state login
-* **TypeScript strict typing**
-* GitHub Actions **CI**
-* **Allure + HTML reports**
-* Automated **multi-browser** testing
-* Supports scaling to **100+ tests**
-* Readable, atomic **test.steps()**
+* **Page Objects** keep tests readable when you hit 50+ test cases
+* **Storage state** authentication saves 30+ seconds per test
+* **Fixtures** were confusing at first, now I can't live without them
+* **TypeScript** caught bugs before I ran tests (worth the learning curve)
+* **GitHub Actions** failed 10 times before I got it right
+* **Test organization** matters - smoke vs regression makes running tests faster
 
-This is the kind of automation framework I've built in production environments.
+I built this the same way I built frameworks at my last two jobs.
 
 ---
 
