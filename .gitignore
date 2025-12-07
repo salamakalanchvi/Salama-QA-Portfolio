@@ -156,3 +156,7 @@ allure-report/
 
 # VSCode
 .vscode/
+
+# ESLint and Prettier config (environment-specific)
+.eslintrc.json
+.prettierrc
