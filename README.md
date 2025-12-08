@@ -2,10 +2,6 @@
 
 Welcome! This is my professional QA portfolio showcasing **4+ years of hands-on quality engineering experience**—from discovering QA as a Virtual Assistant to building production-scale automation frameworks.
 
-**My story:** I didn't start with a CS degree. I started as a VA, noticed I cared obsessively about quality, and my manager suggested testing. That one conversation led to learning automation, building frameworks, and getting promoted to mid-level QA. After my second company was affected by layoffs, I took it as a chance to build this portfolio.
-
-**Start here:** [My Full Story →](./ABOUT_ME.md)
-
 ---
 
 ## 📂 What's in This Portfolio
