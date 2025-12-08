@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-
 # Playwright
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
-=======
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
 # Logs
 logs
 *.log
@@ -35,7 +33,7 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-plugin-files)
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -94,9 +92,7 @@ dist
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
+# public   # uncomment only if needed
 
 # vuepress build output
 .vuepress/dist
@@ -132,7 +128,7 @@ dist
 # TernJS port file
 .tern-port
 
-# Stores VSCode versions used for testing VSCode extensions
+# VSCode testing versions
 .vscode-test
 
 # yarn v3
@@ -144,7 +140,23 @@ dist
 !.yarn/sdks
 !.yarn/versions
 
-# Vite logs files
+# Vite log timestamp files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
->>>>>>> 76c2ddf4cb012122b0e938ae70615b5025317492
+
+# Ignore Playwright reports
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+*.webm
+*.png
+*.mp4
+*.zip
+
+# VSCode
+.vscode/
+
+# ESLint and Prettier config (environment-specific)
+.eslintrc.json
+.prettierrc

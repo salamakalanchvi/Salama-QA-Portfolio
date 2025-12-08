@@ -1,27 +1,118 @@
-name: Playwright Tests
+name: Playwright CI Pipeline
+
+# -------------------------------------------------------
+# 🔥 Trigger: Run CI on ANY PUSH (all branches)
+# -------------------------------------------------------
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ "**" ]
+
+concurrency:
+  group: playwright-${{ github.ref }}
+  cancel-in-progress: true
+
+# -------------------------------------------------------
+# 🧪 JOB 1 — Run Playwright Tests
+# -------------------------------------------------------
 jobs:
   test:
-    timeout-minutes: 60
+    name: Run Playwright Tests
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    env:
+      STANDARD_USERNAME: ${{ secrets.STANDARD_USERNAME }}
+      STANDARD_PASSWORD: ${{ secrets.STANDARD_PASSWORD }}
+      ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+      ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+      BASE_URL: ${{ secrets.BASE_URL }}
+
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
-    - uses: actions/upload-artifact@v4
-      if: ${{ !cancelled() }}
-      with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: Playwright-Automation/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('Playwright-Automation/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: Playwright-Automation
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+        working-directory: Playwright-Automation
+
+      - name: Run Playwright Tests (GitHub + HTML)
+        run: npx playwright test --reporter=github,html
+        working-directory: Playwright-Automation
+
+      - name: Upload Playwright HTML report
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: Playwright-Automation/playwright-report
+
+      - name: Generate Allure HTML
+        run: npm run allure:generate
+        working-directory: Playwright-Automation
+
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: Playwright-Automation/allure-results
+
+      - name: Upload Allure HTML Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: Playwright-Automation/allure-report
+
+# -------------------------------------------------------
+# 🚀 JOB 2 — Deploy Playwright HTML report to GitHub Pages (ONLY on main)
+# -------------------------------------------------------
+  deploy-pages:
+    name: Upload report to GitHub Pages
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+      - name: Download HTML Report
+        uses: actions/download-artifact@v4
+        with:
+          name: playwright-report
+          path: ./playwright-report
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./playwright-report
+
+# -------------------------------------------------------
+# 🌐 JOB 3 — Publish GitHub Pages
+# -------------------------------------------------------
+  deploy:
+    name: Publish GitHub Pages
+    needs: deploy-pages
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
