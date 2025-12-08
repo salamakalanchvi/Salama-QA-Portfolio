@@ -47,7 +47,7 @@ I believe good QA is about **thinking ahead**. It's not just running tests; it's
 - Learned CI/CD integration deeply from senior QA engineers (GitHub Actions, CircleCI, Jenkins, Harness)
 - Contributed to bug reporting workflows and severity classification initiatives
 - Participated in test planning and RTM (Requirement Traceability Matrix) creation
-- Scaled automation framework from 20 to **150+ test cases** across multiple projects (web + mobile)
+- Scaled automation framework from 20 to **150+ test cases** across multiple projects (web)
 - Worked closely with best senior QA engineers who shaped how I approach testing
 - Collaborated with cross-functional teams (Product, Engineering, DevOps)
 - **Key learnings:**
@@ -110,6 +110,9 @@ Playwright (TypeScript), Page Object Model
 **API Testing:**  
 Postman, Playwright API testing, HTTP request/response validation
 
+**Mobile Testing:**  
+Saucelabs, Android Studio, Xcode, BrowserStack, Real device testing
+
 **Project management**
 Jira, Asana, Trello
 
@@ -123,9 +126,9 @@ Test case design, exploratory testing, requirements analysis, RTM traceability, 
 GitHub Actions, Saucelabs, CircleCI, Jenkins, Harness, Allure Reports, HTML Reports
 
 **storing informations and documents about project:**  
- Confluence, Google Drive, Google docs, Excel
+Confluence, Google Drive, Google docs, Excel
  
-** project management**
+**Project management:**
 Jira, Asana, Trello
 
 **AI Tools:**
@@ -155,7 +158,7 @@ After 4+ years of building testing infrastructure and learning across two compan
 
 **What I bring:**
 - Proven ability to learn new technologies without formal CS training
-- Experience taking automation from 20 to 80+ tests
+- Experience taking automation from 20 to 150+ tests
 - Strong foundation in both manual and automation testing
 - CI/CD pipeline experience and knowledge
 - Growth mindset and proven ability to learn quickly
@@ -191,8 +194,7 @@ I'm looking for a team that believes in those same things.
 I'm actively looking for QA roles and always open to conversations:
 
 - **LinkedIn:** [Salama Kalanchvi](https://www.linkedin.com/in/salama-kalanchvi-082589298/)  
-- **GitHub:** [salamakalanchvi](https://github.com/salamakalanchvi)  
-
+- **Email:** salamaawan397@gmail.com
 ---
 
 **Last Updated:** December 2025
