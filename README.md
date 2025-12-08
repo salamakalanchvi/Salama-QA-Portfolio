@@ -10,19 +10,11 @@ Welcome! This is my professional QA portfolio showcasing **4+ years of hands-on 
 
 ## 📂 What's in This Portfolio
 
-- **[ABOUT_ME.md](./ABOUT_ME.md)** — My journey from VA to QA to automation engineer
 - **[Playwright-Automation/](./Playwright-Automation/)** — Production-like automation framework with TypeScript, Page Objects, CI/CD
 - **[Manual-Testing/](./Manual-Testing/)** — Test cases, scenarios, bug reports, RTM traceability
 - **[Documentation/](./Documentation/)** — QA strategy and my testing philosophy
 
 ---
-
-## 🎯 The Numbers That Matter
-- ✅ **45% reduction** in regression testing time through automation
-- ✅ Scaled automation frameworks from 20 to **150+ test cases** across multiple projects
-- ✅ **96% test pass rate** maintained in production
-- ✅ **Promoted** from Associate to Mid-Level QA
-- ✅ **0 critical incidents** from my test coverage
 
 **In This Portfolio:**
 - ✅ **26 automated tests** (2 smoke, 24 regression) built from scratch
@@ -52,7 +44,7 @@ npm run report:open
 I'm actively looking for QA/Automation roles where I can continue learning and building quality culture.
 
 - **LinkedIn:** [Salama Kalanchvi](https://www.linkedin.com/in/salama-kalanchvi-082589298/)
-- **GitHub:** [salamakalanchvi](https://github.com/salamakalanchvi)
+- **Email:** salamaawan397@gmail.com
 
 ---
 
