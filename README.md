@@ -93,7 +93,7 @@ No CS background? That meant I had to be resourceful, persistent, and humble. I 
 ## My Impact (Real Numbers)
 
 - **45% reduction** in regression test execution time through strategic test selection and automation
-- Built and maintained **80+ automated tests** across multiple projects and features
+- Built and maintained *150+ automated tests** across multiple projects and features
 - Maintained **96% test pass rate** while scaling framework and adding new tests
 - **0 critical production incidents** from untested code paths in features I QA'd
 - Promoted from Associate to Mid-Level QA based on contributions to testing infrastructure
