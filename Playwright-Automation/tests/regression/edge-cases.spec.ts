@@ -15,7 +15,12 @@ const PRODUCT_TWO = 'Sauce Labs Bike Light';
 
 test.describe('Edge Cases - Cart Persistence', () => {
 
-  test('Cart persists after page refresh @regression @edge @cart', async ({
+  test(
+    'Cart persists after page refresh',
+    {
+      tag: ['@regression', '@edge', '@cart'],
+    },
+    async ({
     userInventoryPage,
     userCartPage,
   }) => {
@@ -45,7 +50,12 @@ test.describe('Edge Cases - Cart Persistence', () => {
 
 test.describe('Edge Cases - Multiple Checkouts', () => {
 
-  test('Multiple checkouts in sequence @regression @edge @checkout', async ({
+  test(
+    'Multiple checkouts in sequence',
+    {
+      tag: ['@regression', '@edge', '@checkout'],
+    },
+    async ({
     userInventoryPage,
     userCartPage,
     userCheckoutPage,
@@ -88,7 +98,12 @@ test.describe('Edge Cases - Multiple Checkouts', () => {
 
 test.describe('Edge Cases - Empty Cart', () => {
 
-  test('Empty cart after removing all items @regression @edge @cart', async ({
+  test(
+    'Empty cart after removing all items',
+    {
+      tag: ['@regression', '@edge', '@cart'],
+    },
+    async ({
     userInventoryPage,
     userCartPage,
   }) => {

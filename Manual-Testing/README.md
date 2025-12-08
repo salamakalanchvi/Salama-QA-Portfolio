@@ -89,6 +89,4 @@ If you want to reuse these files:
 ## Final Note 💬
 
 This manual testing folder represents my real working approach as a QA Engineer.  
-Each document reflects clarity, organization, and attention to detail — key qualities every recruiter and team looks for.
-
 If you’d like more examples (API testing, mobile testing, exploratory testing notes), I can add them too.

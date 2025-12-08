@@ -24,7 +24,12 @@ test.describe('Sauce Demo - Cart Operations', () => {
     await userInventoryPage.goToInventory();
   });
 
-  test('Remove item from cart @regression @cart', async ({ userInventoryPage, userCartPage }) => {
+  test(
+    'Remove item from cart',
+    {
+      tag: ['@regression', '@cart'],
+    },
+    async ({ userInventoryPage, userCartPage }) => {
 
     await test.step('Add product to cart', async () => {
       await userInventoryPage.addItemToCart(SINGLE_PRODUCT);
@@ -43,7 +48,12 @@ test.describe('Sauce Demo - Cart Operations', () => {
     });
   });
 
-  test('View order summary with correct items @regression @cart', async ({
+  test(
+    'View order summary with correct items',
+    {
+      tag: ['@regression', '@cart'],
+    },
+    async ({
     userInventoryPage,
     userCartPage,
     userCheckoutPage,
@@ -77,7 +87,12 @@ test.describe('Sauce Demo - Cart Operations', () => {
 
 test.describe('Sauce Demo - Multiple Items Checkout', () => {
 
-  test('Complete checkout with multiple items @regression @cart @checkout', async ({
+  test(
+    'Complete checkout with multiple items',
+    {
+      tag: ['@regression', '@cart', '@checkout'],
+    },
+    async ({
     userInventoryPage,
     userCartPage,
     userCheckoutPage,
@@ -106,7 +121,12 @@ test.describe('Sauce Demo - Multiple Items Checkout', () => {
     });
   });
 
-  test('Verify total calculation in checkout @regression @cart @checkout', async ({
+  test(
+    'Verify total calculation in checkout',
+    {
+      tag: ['@regression', '@cart', '@checkout'],
+    },
+    async ({
     userInventoryPage,
     userCartPage,
     userCheckoutPage,

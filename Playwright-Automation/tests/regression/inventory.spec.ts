@@ -16,7 +16,12 @@ test.describe('Sauce Demo - Inventory Sorting', () => {
     await userInventoryPage.goToInventory();
   });
 
-  test('Sort products by price (low to high) @regression @inventory', async ({ userInventoryPage }) => {
+  test(
+    'Sort products by price (low to high)',
+    {
+      tag: ['@regression', '@inventory'],
+    },
+    async ({ userInventoryPage }) => {
 
     await test.step('Sort products by price (low to high)', async () => {
       await userInventoryPage.sortProducts('lohi');
@@ -27,7 +32,12 @@ test.describe('Sauce Demo - Inventory Sorting', () => {
     });
   });
 
-  test('Sort products by name (A to Z) @regression @inventory', async ({ userInventoryPage }) => {
+  test(
+    'Sort products by name (A to Z)',
+    {
+      tag: ['@regression', '@inventory'],
+    },
+    async ({ userInventoryPage }) => {
 
     await test.step('Sort products by name A to Z', async () => {
       await userInventoryPage.sortProducts('az');
@@ -46,7 +56,12 @@ test.describe('Sauce Demo - Inventory Cart Operations', () => {
     await userInventoryPage.goToInventory();
   });
 
-  test('Add multiple products to cart @regression @inventory', async ({ userInventoryPage }) => {
+  test(
+    'Add multiple products to cart',
+    {
+      tag: ['@regression', '@inventory'],
+    },
+    async ({ userInventoryPage }) => {
 
     await test.step('Add multiple products', async () => {
       for (const product of PRODUCTS) {
@@ -59,7 +74,12 @@ test.describe('Sauce Demo - Inventory Cart Operations', () => {
     });
   });
 
-  test('Remove product from cart via inventory @regression @inventory', async ({ userInventoryPage }) => {
+  test(
+    'Remove product from cart via inventory',
+    {
+      tag: ['@regression', '@inventory'],
+    },
+    async ({ userInventoryPage }) => {
 
     await test.step('Add product to cart', async () => {
       await userInventoryPage.addItemToCart(PRODUCTS[0]);

@@ -4,7 +4,12 @@ import { test } from '../../fixtures/user.fixtures';
 
 test.describe('Sauce Demo - Session Management', () => {
 
-  test('User logs out successfully @regression @session', async ({ userInventoryPage }) => {
+  test(
+    'User logs out successfully',
+    {
+      tag: ['@regression', '@session'],
+    },
+    async ({ userInventoryPage }) => {
 
     await test.step('Navigate to inventory page', async () => {
       await userInventoryPage.goToInventory();
@@ -19,7 +24,12 @@ test.describe('Sauce Demo - Session Management', () => {
     });
   });
 
-  test('Protected pages are inaccessible after logout @regression @session @edge', async ({
+  test(
+    'Protected pages are inaccessible after logout',
+    {
+      tag: ['@regression', '@session', '@edge'],
+    },
+    async ({
     userInventoryPage,
   }) => {
 

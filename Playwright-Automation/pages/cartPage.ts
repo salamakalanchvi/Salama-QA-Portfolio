@@ -101,7 +101,7 @@ export class CartPage {
     logger.info(`Verifying checkout error: "${expectedMessage}"`);
     await expect(this.locators.errorMessage.locator)
       .toContainText(expectedMessage);
-  }
+      }
 
   async verifyCartPageIsOpen() {
   logger.info('Verifying cart page is open');

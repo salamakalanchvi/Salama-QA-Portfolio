@@ -29,7 +29,12 @@ test.describe('Sauce Demo - Checkout Form Validation', () => {
     });
   });
 
-  test('Empty first name validation @regression @negative @checkout @validation', async ({ userCartPage }) => {
+  test(
+    'Empty first name validation',
+    {
+      tag: ['@regression', '@negative', '@checkout', '@validation'],
+    },
+    async ({ userCartPage }) => {
 
     await test.step('Submit checkout with empty first name', async () => {
       await userCartPage.fillCheckoutInformation(
@@ -45,7 +50,12 @@ test.describe('Sauce Demo - Checkout Form Validation', () => {
     });
   });
 
-  test('Empty last name validation @regression @negative @checkout @validation', async ({ userCartPage }) => {
+  test(
+    'Empty last name validation',
+    {
+      tag: ['@regression', '@negative', '@checkout', '@validation'],
+    },
+    async ({ userCartPage }) => {
 
     await test.step('Submit checkout with empty last name', async () => {
       await userCartPage.fillCheckoutInformation(
@@ -61,7 +71,12 @@ test.describe('Sauce Demo - Checkout Form Validation', () => {
     });
   });
 
-  test('Empty postal code validation @regression @negative @checkout @validation', async ({ userCartPage }) => {
+  test(
+    'Empty postal code validation',
+    {
+      tag: ['@regression', '@negative', '@checkout', '@validation'],
+    },
+    async ({ userCartPage }) => {
 
     await test.step('Submit checkout with empty postal code', async () => {
       await userCartPage.fillCheckoutInformation(
