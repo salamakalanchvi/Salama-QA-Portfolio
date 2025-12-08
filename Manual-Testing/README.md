@@ -20,16 +20,7 @@ Every document in this folder uses consistent formatting, clear structure, and V
 
 ---
 
-## Why This Portfolio Matters 🎯
-
-Recruiters and hiring managers want to see:
-
-- How you **think as a tester**  
-- How you **structure your testing work**  
-- Whether you can clearly explain what broke and why  
-- If your documentation is actually useful (not just pretty)  
-
-This folder demonstrates:
+## This folder demonstrates:
 
 - My real-world testing process and how I think through problems  
 - How I trace requirements to test cases (traceability matters)  
