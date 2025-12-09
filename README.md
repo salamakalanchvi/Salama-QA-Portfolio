@@ -125,7 +125,7 @@ Test case design, exploratory testing, requirements analysis, RTM traceability, 
 **CI/CD & DevOps:**  
 GitHub Actions, Saucelabs, CircleCI, Jenkins, Harness, Allure Reports, HTML Reports
 
-**storing informations and documents about project:**  
+**Storing informations and documents about project:**  
 Confluence, Google Drive, Google docs, Excel
  
 **Project management:**
