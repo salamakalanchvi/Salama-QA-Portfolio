@@ -113,10 +113,7 @@ Postman, Playwright API testing, HTTP request/response validation
 **Mobile Testing:**  
 Saucelabs, Android Studio, Xcode, BrowserStack, Real device testing
 
-**Project management**
-Jira, Asana, Trello
-
-**Test management**
+**Test management:**
 TestRail, TestLodge
 
 **Manual Testing:**  
@@ -132,10 +129,10 @@ Confluence, Google Drive, Google docs, Excel
 Jira, Asana, Trello
 
 **AI Tools:**
-Devin, Cursor, Github Copiolot, Applitools
+Devin, Cursor, GitHub Copilot, Applitools
 
 **Other:**  
-Git, VSCode, Chrome DevTools,
+Git, VSCode, Chrome DevTools
 
 ---
 
